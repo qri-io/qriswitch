@@ -21,12 +21,26 @@ Have nodejs and qri installed, then
 
 ## Source qriswitch's env variables file in your shell
 
+### Bash
+
 qriswitch sets environment variables in a file `$HOME/.qriswitch/.env`.  This file should be sourced in your shell environment:
 
 For me, it's `.bash_profile`, but add this wherever your shell gets its settings.
 ```
 source ~/.qriswitch/.env
 ```
+
+### Fish
+
+fish gotta be weird.
+
+Set an alias in your `config.fish` or before sourcing `~/.qriswitch/.env`.
+
+```
+alias unset 'set --erase' # bash compatibility
+```
+
+With that alias, fish should work like bash.
 
 ## Creating a New Profile
 
